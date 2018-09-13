@@ -10,13 +10,15 @@ import UIKit
 
 //@IBDesignable
 
+private struct Constants {
+    static var plusLineWidth: CGFloat = 1
+    static var plusButtonScale: CGFloat = 1
+    static var halfPointShift: CGFloat = 0.5
+    static var rows: Int = 20
+    static var columns: Int = 40
+}
+
 class UIViewCanvas: UIView {
-    
-    private struct Constants {
-        static var plusLineWidth: CGFloat = 1
-        static var plusButtonScale: CGFloat = 1
-        static var halfPointShift: CGFloat = 0.5
-    }
     
     override func draw(_ rect: CGRect) {
         let rowAmount: Int = 20
@@ -26,29 +28,33 @@ class UIViewCanvas: UIView {
         let blockHeight = Int(floor(Double(Int(bounds.height) / colAmount)))
         let width = Int(bounds.width)
         let height = Int(bounds.height)
-        print(blockWidth, blockHeight)
         
         let path = UIBezierPath(rect: rect)
         UIColor.lightGray.setFill()
         path.fill()
+        factoryHall1(blockWidth: blockWidth, blockHeight: blockHeight)
         row(blockHeight: blockHeight, width: width, height: height)
         col(blockWidth: blockWidth, width: width, height: height)
-        drawObstacles(blockWidthMult: blockWidth, blockHeightMult: blockHeight)
         
     }
     
-    func drawObstacles(blockWidthMult: Int, blockHeightMult: Int) {
+    func factoryHall1(blockWidth: Int, blockHeight: Int) {
         var obstacles:[Obstacle] = []
 
-        let obstacle1 = Obstacle(x: 5,y: 5)
-        obstacles.append(obstacle1)
-        let obstacle2 = Obstacle(x: 10,y: 10)
-        obstacles.append(obstacle2)
+        for i in 0...19 where (i != 11) && (i != 12) && (i != 13) {
+            obstacles.append(Obstacle(x: i, y: 23))
+        }
+        
+        for i in 10...14 {
+            obstacles.append(Obstacle(x: i, y: 26))
+        }
 
         for obstacle in obstacles {
-            let rec = CGRect(x: obstacle.x * blockWidthMult, y: obstacle.y * Int(bounds.height / 40), width: Int(bounds.width / 20), height: Int(bounds.height / 40));
+            let rec = CGRect(x: obstacle.x * blockWidth, y: obstacle.y * blockHeight, width: blockWidth, height: blockHeight);
+            print(obstacle.x, obstacle.y)
+            print(obstacle.x * blockWidth,obstacle.y * blockHeight, blockWidth, blockHeight)
             let pathObs = UIBezierPath(rect: rec)
-            UIColor.green.setFill()
+            UIColor.blue.setFill()
             pathObs.fill()
         }
     }
@@ -57,7 +63,7 @@ class UIViewCanvas: UIView {
         let currentWidth = 0
         var currentHeight = blockHeight
         
-        while currentHeight < height {
+        for i in 1...Constants.columns {
             let plusPath = UIBezierPath()
             
             plusPath.lineWidth = Constants.plusLineWidth
@@ -73,7 +79,7 @@ class UIViewCanvas: UIView {
             UIColor.black.setStroke()
             plusPath.stroke()
             
-            currentHeight += height / 40
+            currentHeight = blockHeight * i
         }
     }
     
@@ -82,9 +88,7 @@ class UIViewCanvas: UIView {
         var currentWidth1 = blockWidth
         let currentHeight1 = 0
         
-        while currentWidth1 < width{
-            
-            print(currentWidth1)
+        for i in 1...Constants.rows {
         
             let plusPath1 = UIBezierPath()
         
@@ -101,7 +105,7 @@ class UIViewCanvas: UIView {
             UIColor.black.setStroke()
             plusPath1.stroke()
         
-            currentWidth1 += width / 20
+            currentWidth1 = blockWidth * i
         }
     }
     
@@ -113,6 +117,6 @@ public class Obstacle {
     
     init(x : Int, y: Int) {
         self.x = x
-        self.y = y
+        self.y = (-1 * (y - Constants.columns)) - 1
     }
 }
