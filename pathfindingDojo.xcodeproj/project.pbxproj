@@ -14,7 +14,9 @@
 		C193326221493575005BB10B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C193326021493575005BB10B /* LaunchScreen.storyboard */; };
 		C193326D21493575005BB10B /* pathfindingDojoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193326C21493575005BB10B /* pathfindingDojoTests.swift */; };
 		C193327821493575005BB10B /* pathfindingDojoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193327721493575005BB10B /* pathfindingDojoUITests.swift */; };
-		C193328821493A4C005BB10B /* UIViewCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193328721493A4C005BB10B /* UIViewCanvas.swift */; };
+		C193328821493A4C005BB10B /* UIViewCanvas1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193328721493A4C005BB10B /* UIViewCanvas1.swift */; };
+		C1ADBC70214AEB8B00058141 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADBC6F214AEB8B00058141 /* SecondViewController.swift */; };
+		C1ADBC72214AF24B00058141 /* UIViewCanvas2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADBC71214AF24B00058141 /* UIViewCanvas2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,9 @@
 		C193327321493575005BB10B /* pathfindingDojoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pathfindingDojoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C193327721493575005BB10B /* pathfindingDojoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathfindingDojoUITests.swift; sourceTree = "<group>"; };
 		C193327921493575005BB10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C193328721493A4C005BB10B /* UIViewCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCanvas.swift; sourceTree = "<group>"; };
+		C193328721493A4C005BB10B /* UIViewCanvas1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCanvas1.swift; sourceTree = "<group>"; };
+		C1ADBC6F214AEB8B00058141 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		C1ADBC71214AF24B00058141 /* UIViewCanvas2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCanvas2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				C193325721493572005BB10B /* AppDelegate.swift */,
 				C193325921493572005BB10B /* ViewController.swift */,
-				C193328721493A4C005BB10B /* UIViewCanvas.swift */,
+				C1ADBC6F214AEB8B00058141 /* SecondViewController.swift */,
+				C193328721493A4C005BB10B /* UIViewCanvas1.swift */,
+				C1ADBC71214AF24B00058141 /* UIViewCanvas2.swift */,
 				C193325B21493572005BB10B /* Main.storyboard */,
 				C193325E21493575005BB10B /* Assets.xcassets */,
 				C193326021493575005BB10B /* LaunchScreen.storyboard */,
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1ADBC70214AEB8B00058141 /* SecondViewController.swift in Sources */,
 				C193325A21493572005BB10B /* ViewController.swift in Sources */,
 				C193325821493572005BB10B /* AppDelegate.swift in Sources */,
-				C193328821493A4C005BB10B /* UIViewCanvas.swift in Sources */,
+				C1ADBC72214AF24B00058141 /* UIViewCanvas2.swift in Sources */,
+				C193328821493A4C005BB10B /* UIViewCanvas1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

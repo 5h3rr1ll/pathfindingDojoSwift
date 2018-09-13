@@ -13,7 +13,7 @@ private struct Constants {
     static var rows: Int = 40
 }
 
-class UIViewCanvas: UIView {
+class UIViewCanvas1: UIView {
     
     override func draw(_ rect: CGRect) {
         let blockWidth = Int(floor(Double(Int(bounds.width) / Constants.columns)))
@@ -23,6 +23,8 @@ class UIViewCanvas: UIView {
         
         drawBackground(rect: rect)
         drawFactoryHall1(blockWidth: blockWidth, blockHeight: blockHeight)
+        drawRobot(blockWidth: blockWidth, blockHeight: blockHeight)
+        drawGoal(blockWidth: blockWidth, blockHeight: blockHeight)
         drawRow(blockHeight: blockHeight, width: width)
         drawCol(blockWidth: blockWidth, height: height)
         
@@ -34,13 +36,29 @@ class UIViewCanvas: UIView {
         path.fill()
     }
     
+    func drawRobot(blockWidth: Int, blockHeight: Int) {
+        let robot = Object(x: 12,y: 30)
+        let rec = CGRect(x: robot.x * blockWidth, y: robot.y * blockHeight, width: blockWidth, height: blockHeight);
+        let pathObs = UIBezierPath(rect: rec)
+        UIColor.red.setFill()
+        pathObs.fill()
+    }
+    
+    func drawGoal(blockWidth: Int, blockHeight: Int) {
+        let goal = Object(x: 10, y: 3)
+        let rec = CGRect(x: goal.x * blockWidth, y: goal.y * blockHeight, width: blockWidth, height: blockHeight);
+        let pathObs = UIBezierPath(rect: rec)
+        UIColor.green.setFill()
+        pathObs.fill()
+    }
+    
     func drawFactoryHall1(blockWidth: Int, blockHeight: Int) {
-        var obstacles:[Obstacle] = []
+        var obstacles:[Object] = []
         for i in 0...19 where (i != 11) && (i != 12) && (i != 13) {
-            obstacles.append(Obstacle(x: i, y: 23))
+            obstacles.append(Object(x: i, y: 23))
         }
         for i in 10...14 {
-            obstacles.append(Obstacle(x: i, y: 26))
+            obstacles.append(Object(x: i, y: 26))
         }
         
         for obstacle in obstacles {
@@ -87,7 +105,7 @@ class UIViewCanvas: UIView {
     
 }
 
-public class Obstacle {
+public class Object {
     let x : Int
     let y : Int
     
