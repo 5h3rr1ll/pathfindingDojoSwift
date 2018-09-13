@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C193325821493572005BB10B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193325721493572005BB10B /* AppDelegate.swift */; };
+		C193325A21493572005BB10B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193325921493572005BB10B /* ViewController.swift */; };
+		C193325D21493572005BB10B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C193325B21493572005BB10B /* Main.storyboard */; };
+		C193325F21493575005BB10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C193325E21493575005BB10B /* Assets.xcassets */; };
+		C193326221493575005BB10B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C193326021493575005BB10B /* LaunchScreen.storyboard */; };
+		C193326D21493575005BB10B /* pathfindingDojoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193326C21493575005BB10B /* pathfindingDojoTests.swift */; };
+		C193327821493575005BB10B /* pathfindingDojoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193327721493575005BB10B /* pathfindingDojoUITests.swift */; };
+		C193328821493A4C005BB10B /* UIViewCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193328721493A4C005BB10B /* UIViewCanvas.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C193326921493575005BB10B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C193324C21493572005BB10B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C193325321493572005BB10B;
+			remoteInfo = pathfindingDojo;
+		};
+		C193327421493575005BB10B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C193324C21493572005BB10B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C193325321493572005BB10B;
+			remoteInfo = pathfindingDojo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C193325421493572005BB10B /* pathfindingDojo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pathfindingDojo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C193325721493572005BB10B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C193325921493572005BB10B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C193325C21493572005BB10B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C193325E21493575005BB10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C193326121493575005BB10B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C193326321493575005BB10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C193326821493575005BB10B /* pathfindingDojoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pathfindingDojoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C193326C21493575005BB10B /* pathfindingDojoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathfindingDojoTests.swift; sourceTree = "<group>"; };
+		C193326E21493575005BB10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C193327321493575005BB10B /* pathfindingDojoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pathfindingDojoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C193327721493575005BB10B /* pathfindingDojoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathfindingDojoUITests.swift; sourceTree = "<group>"; };
+		C193327921493575005BB10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C193328721493A4C005BB10B /* UIViewCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCanvas.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C193325121493572005BB10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C193326521493575005BB10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C193327021493575005BB10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C193324B21493572005BB10B = {
+			isa = PBXGroup;
+			children = (
+				C193325621493572005BB10B /* pathfindingDojo */,
+				C193326B21493575005BB10B /* pathfindingDojoTests */,
+				C193327621493575005BB10B /* pathfindingDojoUITests */,
+				C193325521493572005BB10B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C193325521493572005BB10B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C193325421493572005BB10B /* pathfindingDojo.app */,
+				C193326821493575005BB10B /* pathfindingDojoTests.xctest */,
+				C193327321493575005BB10B /* pathfindingDojoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C193325621493572005BB10B /* pathfindingDojo */ = {
+			isa = PBXGroup;
+			children = (
+				C193325721493572005BB10B /* AppDelegate.swift */,
+				C193325921493572005BB10B /* ViewController.swift */,
+				C193328721493A4C005BB10B /* UIViewCanvas.swift */,
+				C193325B21493572005BB10B /* Main.storyboard */,
+				C193325E21493575005BB10B /* Assets.xcassets */,
+				C193326021493575005BB10B /* LaunchScreen.storyboard */,
+				C193326321493575005BB10B /* Info.plist */,
+			);
+			path = pathfindingDojo;
+			sourceTree = "<group>";
+		};
+		C193326B21493575005BB10B /* pathfindingDojoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C193326C21493575005BB10B /* pathfindingDojoTests.swift */,
+				C193326E21493575005BB10B /* Info.plist */,
+			);
+			path = pathfindingDojoTests;
+			sourceTree = "<group>";
+		};
+		C193327621493575005BB10B /* pathfindingDojoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C193327721493575005BB10B /* pathfindingDojoUITests.swift */,
+				C193327921493575005BB10B /* Info.plist */,
+			);
+			path = pathfindingDojoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C193325321493572005BB10B /* pathfindingDojo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C193327C21493575005BB10B /* Build configuration list for PBXNativeTarget "pathfindingDojo" */;
+			buildPhases = (
+				C193325021493572005BB10B /* Sources */,
+				C193325121493572005BB10B /* Frameworks */,
+				C193325221493572005BB10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pathfindingDojo;
+			productName = pathfindingDojo;
+			productReference = C193325421493572005BB10B /* pathfindingDojo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C193326721493575005BB10B /* pathfindingDojoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C193327F21493575005BB10B /* Build configuration list for PBXNativeTarget "pathfindingDojoTests" */;
+			buildPhases = (
+				C193326421493575005BB10B /* Sources */,
+				C193326521493575005BB10B /* Frameworks */,
+				C193326621493575005BB10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C193326A21493575005BB10B /* PBXTargetDependency */,
+			);
+			name = pathfindingDojoTests;
+			productName = pathfindingDojoTests;
+			productReference = C193326821493575005BB10B /* pathfindingDojoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C193327221493575005BB10B /* pathfindingDojoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C193328221493575005BB10B /* Build configuration list for PBXNativeTarget "pathfindingDojoUITests" */;
+			buildPhases = (
+				C193326F21493575005BB10B /* Sources */,
+				C193327021493575005BB10B /* Frameworks */,
+				C193327121493575005BB10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C193327521493575005BB10B /* PBXTargetDependency */,
+			);
+			name = pathfindingDojoUITests;
+			productName = pathfindingDojoUITests;
+			productReference = C193327321493575005BB10B /* pathfindingDojoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C193324C21493572005BB10B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Patrick Weber";
+				TargetAttributes = {
+					C193325321493572005BB10B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					C193326721493575005BB10B = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = C193325321493572005BB10B;
+					};
+					C193327221493575005BB10B = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = C193325321493572005BB10B;
+					};
+				};
+			};
+			buildConfigurationList = C193324F21493572005BB10B /* Build configuration list for PBXProject "pathfindingDojo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C193324B21493572005BB10B;
+			productRefGroup = C193325521493572005BB10B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C193325321493572005BB10B /* pathfindingDojo */,
+				C193326721493575005BB10B /* pathfindingDojoTests */,
+				C193327221493575005BB10B /* pathfindingDojoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C193325221493572005BB10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C193326221493575005BB10B /* LaunchScreen.storyboard in Resources */,
+				C193325F21493575005BB10B /* Assets.xcassets in Resources */,
+				C193325D21493572005BB10B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C193326621493575005BB10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C193327121493575005BB10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C193325021493572005BB10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C193325A21493572005BB10B /* ViewController.swift in Sources */,
+				C193325821493572005BB10B /* AppDelegate.swift in Sources */,
+				C193328821493A4C005BB10B /* UIViewCanvas.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C193326421493575005BB10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C193326D21493575005BB10B /* pathfindingDojoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C193326F21493575005BB10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C193327821493575005BB10B /* pathfindingDojoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C193326A21493575005BB10B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C193325321493572005BB10B /* pathfindingDojo */;
+			targetProxy = C193326921493575005BB10B /* PBXContainerItemProxy */;
+		};
+		C193327521493575005BB10B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C193325321493572005BB10B /* pathfindingDojo */;
+			targetProxy = C193327421493575005BB10B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C193325B21493572005BB10B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C193325C21493572005BB10B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C193326021493575005BB10B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C193326121493575005BB10B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C193327A21493575005BB10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C193327B21493575005BB10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C193327D21493575005BB10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = pathfindingDojo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patrickweber.pathfindingDojo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C193327E21493575005BB10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = pathfindingDojo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patrickweber.pathfindingDojo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C193328021493575005BB10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6225S33F8J;
+				INFOPLIST_FILE = pathfindingDojoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patrickweber.pathfindingDojoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pathfindingDojo.app/pathfindingDojo";
+			};
+			name = Debug;
+		};
+		C193328121493575005BB10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6225S33F8J;
+				INFOPLIST_FILE = pathfindingDojoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patrickweber.pathfindingDojoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pathfindingDojo.app/pathfindingDojo";
+			};
+			name = Release;
+		};
+		C193328321493575005BB10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6225S33F8J;
+				INFOPLIST_FILE = pathfindingDojoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patrickweber.pathfindingDojoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = pathfindingDojo;
+			};
+			name = Debug;
+		};
+		C193328421493575005BB10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6225S33F8J;
+				INFOPLIST_FILE = pathfindingDojoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patrickweber.pathfindingDojoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = pathfindingDojo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C193324F21493572005BB10B /* Build configuration list for PBXProject "pathfindingDojo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C193327A21493575005BB10B /* Debug */,
+				C193327B21493575005BB10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C193327C21493575005BB10B /* Build configuration list for PBXNativeTarget "pathfindingDojo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C193327D21493575005BB10B /* Debug */,
+				C193327E21493575005BB10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C193327F21493575005BB10B /* Build configuration list for PBXNativeTarget "pathfindingDojoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C193328021493575005BB10B /* Debug */,
+				C193328121493575005BB10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C193328221493575005BB10B /* Build configuration list for PBXNativeTarget "pathfindingDojoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C193328321493575005BB10B /* Debug */,
+				C193328421493575005BB10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C193324C21493572005BB10B /* Project object */;
+}
