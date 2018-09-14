@@ -20,13 +20,15 @@ class UIViewCanvas2: UIView {
         let blockHeight = Int(floor(Double(Int(bounds.height) / Constants.rows)))
         let width = Int(bounds.width)
         let height = Int(bounds.height)
+        let widthBorder = width - blockWidth * Constants.columns
+        let heightBorder = height - blockHeight * Constants.rows
         
         drawBackground(rect: rect)
         drawFactoryHall1(blockWidth: blockWidth, blockHeight: blockHeight)
         drawRobot(blockWidth: blockWidth, blockHeight: blockHeight)
         drawGoal(blockWidth: blockWidth, blockHeight: blockHeight)
-        drawRow(blockHeight: blockHeight, width: width)
-        drawCol(blockWidth: blockWidth, height: height)
+        drawRow(blockHeight: blockHeight, width: width, height: height, widthBorder: widthBorder, heightBorder: heightBorder)
+        drawCol(blockWidth: blockWidth, width: width, height: height, widthBorder: widthBorder, heightBorder: heightBorder)
         
     }
     
@@ -75,7 +77,7 @@ class UIViewCanvas2: UIView {
         }
     }
     
-    func drawRow(blockHeight: Int, width: Int) {
+    func drawRow(blockHeight: Int, width: Int, height: Int, widthBorder: Int, heightBorder: Int) {
         var currentHeight = blockHeight
         
         for col in 1...Constants.rows {
@@ -83,16 +85,20 @@ class UIViewCanvas2: UIView {
             
             rowPath.move(to: CGPoint(x: 0, y: currentHeight))
             
-            rowPath.addLine(to: CGPoint(x: 0 + width, y: currentHeight))
+            rowPath.addLine(to: CGPoint(x: width - widthBorder, y: currentHeight))
             
             UIColor.black.setStroke()
             rowPath.stroke()
             
             currentHeight = blockHeight * col
         }
+        let rec = CGRect(x: 0, y: height - heightBorder, width: width, height: height);
+        let pathObs = UIBezierPath(rect: rec)
+        UIColor.black.setFill()
+        pathObs.fill()
     }
     
-    func drawCol(blockWidth: Int, height: Int) {
+    func drawCol(blockWidth: Int, width: Int, height: Int, widthBorder: Int, heightBorder: Int) {
         var currentWidth1 = blockWidth
         
         for row in 1...Constants.columns {
@@ -107,6 +113,10 @@ class UIViewCanvas2: UIView {
             
             currentWidth1 = blockWidth * row
         }
+        let rec = CGRect(x: width - widthBorder, y: 0, width: width, height: height);
+        let pathObs = UIBezierPath(rect: rec)
+        UIColor.black.setFill()
+        pathObs.fill()
     }
     
 }
