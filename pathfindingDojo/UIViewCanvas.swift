@@ -1,8 +1,8 @@
 //
-//  UIViewCanvas2.swift
+//  PushButton.swift
 //  pathfindingDojo
 //
-//  Created by Patrick Weber on 13.09.18.
+//  Created by Patrick Weber on 12.09.18.
 //  Copyright © 2018 Patrick Weber. All rights reserved.
 //
 
@@ -13,7 +13,7 @@ private struct Constants {
     static var rows: Int = 40
 }
 
-class UIViewCanvas2: UIView {
+class UIViewCanvas1: UIView {
     
     override func draw(_ rect: CGRect) {
         let blockWidth = Int(floor(Double(Int(bounds.width) / Constants.columns)))
@@ -55,21 +55,7 @@ class UIViewCanvas2: UIView {
     }
     
     func drawFactoryHall1(blockWidth: Int, blockHeight: Int) {
-        var obstacles:[Object] = []
-        for i in 0...25 where (i != 5) && (i != 12) && (i != 13) {
-            obstacles.append(Object(x: i, y: 23))
-        }
-        for i in 0...14{
-            obstacles.append(Object(x: i, y: 17))
-        }
-        for i in 13...19{
-            obstacles.append(Object(x: i, y: 19))
-        }
-        for i in 10...14 {
-            obstacles.append(Object(x: i, y: 26))
-        }
-        
-        for obstacle in obstacles {
+        for obstacle in hall(number: 2) {
             let rec = CGRect(x: obstacle.x * blockWidth, y: obstacle.y * blockHeight, width: blockWidth, height: blockHeight);
             let pathObs = UIBezierPath(rect: rec)
             UIColor.blue.setFill()
@@ -77,6 +63,36 @@ class UIViewCanvas2: UIView {
         }
     }
     
+    func hall(number: Int) -> Array<Object> {
+        if number == 1 {
+            var obstacles:[Object] = []
+            for i in 0...19 where (i != 11) && (i != 12) && (i != 13) {
+                obstacles.append(Object(x: i, y: 23))
+            }
+            for i in 10...14 {
+                obstacles.append(Object(x: i, y: 26))
+            }
+            
+            return obstacles
+        } else if number == 2 {
+            var obstacles:[Object] = []
+            for i in 0...25 where (i != 5) && (i != 12) && (i != 13) {
+                obstacles.append(Object(x: i, y: 23))
+            }
+            for i in 0...14{
+                obstacles.append(Object(x: i, y: 17))
+            }
+            for i in 13...19{
+                obstacles.append(Object(x: i, y: 19))
+            }
+            for i in 10...14 {
+                obstacles.append(Object(x: i, y: 26))
+            }
+            return obstacles
+        }
+        return []
+    }
+
     func drawRow(blockHeight: Int, width: Int, height: Int, widthBorder: Int, heightBorder: Int) {
         var currentHeight = blockHeight
         
@@ -103,14 +119,14 @@ class UIViewCanvas2: UIView {
         
         for row in 1...Constants.columns {
             let colPath = UIBezierPath()
-            
+        
             colPath.move(to: CGPoint(x: currentWidth1, y: 0))
-            
+        
             colPath.addLine(to: CGPoint(x: currentWidth1, y: 0 + height))
-            
+        
             UIColor.black.setStroke()
             colPath.stroke()
-            
+        
             currentWidth1 = blockWidth * row
         }
         let rec = CGRect(x: width - widthBorder, y: 0, width: width, height: height);
@@ -121,12 +137,12 @@ class UIViewCanvas2: UIView {
     
 }
 
-//public class Object {
-//    let x : Int
-//    let y : Int
-//
-//    init(x : Int, y: Int) {
-//        self.x = x
-//        self.y = (-1 * (y - Constants.rows)) - 1
-//    }
-//}
+public class Object {
+    let x : Int
+    let y : Int
+    
+    init(x : Int, y: Int) {
+        self.x = x
+        self.y = (-1 * (y - Constants.rows)) - 1
+    }
+}
