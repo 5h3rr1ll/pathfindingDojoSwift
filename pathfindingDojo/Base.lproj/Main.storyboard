@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hlM-95-kcG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,89 +11,6 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pathfindingDojo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H44-yf-hMu">
-                                <rect key="frame" x="125" y="73" width="124" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="Hall1"/>
-                                <connections>
-                                    <segue destination="hlM-95-kcG" kind="show" id="ROD-av-sqz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0a-Rt-Nia">
-                                <rect key="frame" x="122" y="194" width="131" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="Hall2"/>
-                                <connections>
-                                    <segue destination="Jhs-rF-7Ke" kind="show" id="d9Q-nI-X1U"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="x0a-Rt-Nia" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="1tn-v3-54D"/>
-                            <constraint firstItem="H44-yf-hMu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="FGS-X9-NoR"/>
-                            <constraint firstItem="H44-yf-hMu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="asN-Gc-lls"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x0a-Rt-Nia" secondAttribute="bottom" constant="389" id="bcn-yo-KeU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H44-yf-hMu" secondAttribute="trailing" constant="126" id="eF3-aL-NfY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x0a-Rt-Nia" secondAttribute="trailing" constant="122" id="ruB-L3-wmz"/>
-                            <constraint firstItem="x0a-Rt-Nia" firstAttribute="top" secondItem="H44-yf-hMu" secondAttribute="bottom" constant="37" id="v0V-IR-ZWv"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2870" y="102"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="kfR-Hn-B1O">
-            <objects>
-                <viewController id="Jhs-rF-7Ke" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DPL-Ry-AHb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHS-M4-eZ7" customClass="UIViewCanvas2" customModule="pathfindingDojo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oil-7i-FRV">
-                                        <rect key="frame" x="160" y="597" width="54" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Back"/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="eUG-Gb-IUN"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="oil-7i-FRV" secondAttribute="bottom" constant="8" id="HMz-PG-DqS"/>
-                                    <constraint firstItem="oil-7i-FRV" firstAttribute="centerX" secondItem="CHS-M4-eZ7" secondAttribute="centerX" id="cCB-St-GN1"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="CHS-M4-eZ7" firstAttribute="top" secondItem="ZfI-IT-4eW" secondAttribute="top" id="0vn-0h-VfF"/>
-                            <constraint firstItem="CHS-M4-eZ7" firstAttribute="leading" secondItem="ZfI-IT-4eW" secondAttribute="leading" id="3bP-9W-AcV"/>
-                            <constraint firstItem="ZfI-IT-4eW" firstAttribute="trailing" secondItem="CHS-M4-eZ7" secondAttribute="trailing" id="L9k-3K-XRm"/>
-                            <constraint firstItem="ZfI-IT-4eW" firstAttribute="bottom" secondItem="CHS-M4-eZ7" secondAttribute="bottom" id="hXY-Wg-Nf2"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="ZfI-IT-4eW"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ad6-z2-ab3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2004" y="503"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="Hpq-Am-uT6">
             <objects>
                 <viewController id="hlM-95-kcG" sceneMemberID="viewController">
@@ -101,23 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94j-Uj-p9O" customClass="UIViewCanvas1" customModule="pathfindingDojo" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94j-Uj-p9O" customClass="UIViewCanvas" customModule="pathfindingDojo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTb-bt-Xcf">
-                                        <rect key="frame" x="160" y="597" width="54" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Back"/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="4kU-bI-fGi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="vTb-bt-Xcf" firstAttribute="centerX" secondItem="94j-Uj-p9O" secondAttribute="centerX" id="Dt2-ja-O25"/>
-                                    <constraint firstAttribute="bottom" secondItem="vTb-bt-Xcf" secondAttribute="bottom" constant="8" id="VWS-8V-eaB"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -135,7 +38,4 @@
             <point key="canvasLocation" x="-2004" y="-214"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="4kU-bI-fGi"/>
-    </inferredMetricsTieBreakers>
 </document>

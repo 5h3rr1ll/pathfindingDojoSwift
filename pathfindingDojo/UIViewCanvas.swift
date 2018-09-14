@@ -13,7 +13,7 @@ private struct Constants {
     static var rows: Int = 40
 }
 
-class UIViewCanvas1: UIView {
+class UIViewCanvas: UIView {
     
     override func draw(_ rect: CGRect) {
         let blockWidth = Int(floor(Double(Int(bounds.width) / Constants.columns)))
