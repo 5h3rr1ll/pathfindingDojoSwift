@@ -13,11 +13,18 @@ private struct Constants {
     static var rows: Int = 40
 }
 
+@IBDesignable
+
 class UIViewCanvas: UIView {
     
     override func draw(_ rect: CGRect) {
-        let blockWidth = Int(floor(Double(Int(bounds.width) / Constants.columns)))
-        let blockHeight = Int(floor(Double(Int(bounds.height) / Constants.rows)))
+        var blockWidth = Int(floor(Double(Int(bounds.width) / Constants.columns)))
+        var blockHeight = Int(floor(Double(Int(bounds.height) / Constants.rows)))
+        if blockWidth > blockHeight {
+            blockWidth = blockHeight
+        } else {
+            blockHeight = blockWidth
+        }
         let width = Int(bounds.width)
         let height = Int(bounds.height)
         let widthBorder = width - blockWidth * Constants.columns
@@ -39,7 +46,7 @@ class UIViewCanvas: UIView {
     }
     
     func drawRobot(blockWidth: Int, blockHeight: Int) {
-        let robot = Object(x: 12,y: 30)
+        let robot = squareBlock(x: 12,y: 30)
         let rec = CGRect(x: robot.x * blockWidth, y: robot.y * blockHeight, width: blockWidth, height: blockHeight);
         let pathObs = UIBezierPath(rect: rec)
         UIColor.red.setFill()
@@ -47,7 +54,7 @@ class UIViewCanvas: UIView {
     }
     
     func drawGoal(blockWidth: Int, blockHeight: Int) {
-        let goal = Object(x: 10, y: 3)
+        let goal = squareBlock(x: 10, y: 3)
         let rec = CGRect(x: goal.x * blockWidth, y: goal.y * blockHeight, width: blockWidth, height: blockHeight);
         let pathObs = UIBezierPath(rect: rec)
         UIColor.green.setFill()
@@ -55,7 +62,7 @@ class UIViewCanvas: UIView {
     }
     
     func drawFactoryHall1(blockWidth: Int, blockHeight: Int) {
-        for obstacle in hall(number: 2) {
+        for obstacle in hall(hallNumber: 1) {
             let rec = CGRect(x: obstacle.x * blockWidth, y: obstacle.y * blockHeight, width: blockWidth, height: blockHeight);
             let pathObs = UIBezierPath(rect: rec)
             UIColor.blue.setFill()
@@ -63,30 +70,30 @@ class UIViewCanvas: UIView {
         }
     }
     
-    func hall(number: Int) -> Array<Object> {
-        if number == 1 {
-            var obstacles:[Object] = []
+    func hall(hallNumber: Int) -> Array<squareBlock> {
+        if hallNumber == 1 {
+            var obstacles:[squareBlock] = []
             for i in 0...19 where (i != 11) && (i != 12) && (i != 13) {
-                obstacles.append(Object(x: i, y: 23))
+                obstacles.append(squareBlock(x: i, y: 23))
             }
             for i in 10...14 {
-                obstacles.append(Object(x: i, y: 26))
+                obstacles.append(squareBlock(x: i, y: 26))
             }
             
             return obstacles
-        } else if number == 2 {
-            var obstacles:[Object] = []
+        } else if hallNumber == 2 {
+            var obstacles:[squareBlock] = []
             for i in 0...25 where (i != 5) && (i != 12) && (i != 13) {
-                obstacles.append(Object(x: i, y: 23))
+                obstacles.append(squareBlock(x: i, y: 23))
             }
             for i in 0...14{
-                obstacles.append(Object(x: i, y: 17))
+                obstacles.append(squareBlock(x: i, y: 17))
             }
             for i in 13...19{
-                obstacles.append(Object(x: i, y: 19))
+                obstacles.append(squareBlock(x: i, y: 19))
             }
             for i in 10...14 {
-                obstacles.append(Object(x: i, y: 26))
+                obstacles.append(squareBlock(x: i, y: 26))
             }
             return obstacles
         }
@@ -137,7 +144,7 @@ class UIViewCanvas: UIView {
     
 }
 
-public class Object {
+public class squareBlock {
     let x : Int
     let y : Int
     
