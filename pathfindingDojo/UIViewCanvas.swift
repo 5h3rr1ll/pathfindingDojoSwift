@@ -17,6 +17,11 @@ private struct Constants {
 
 class UIViewCanvas: UIView {
     
+    var obstacles:[Block] = []
+    var lines:[Block] = [Block(x: 10, y: 6)]
+    var goal = Block(x: 10, y: 3)
+    var robot = Block(x: 12, y: 30)
+    
     override func draw(_ rect: CGRect) {
         var blockWidth = Int(floor(Double(Int(bounds.width) / Constants.columns)))
         var blockHeight = Int(floor(Double(Int(bounds.height) / Constants.rows)))
@@ -36,7 +41,6 @@ class UIViewCanvas: UIView {
         drawGoal(blockWidth: blockWidth, blockHeight: blockHeight)
         drawRow(blockHeight: blockHeight, width: width, height: height, widthBorder: widthBorder, heightBorder: heightBorder)
         drawCol(blockWidth: blockWidth, width: width, height: height, widthBorder: widthBorder, heightBorder: heightBorder)
-        
     }
     
     func drawBackground(rect: CGRect) {
@@ -46,15 +50,33 @@ class UIViewCanvas: UIView {
     }
     
     func drawRobot(blockWidth: Int, blockHeight: Int) {
-        let robot = squareBlock(x: 12,y: 30)
         let rec = CGRect(x: robot.x * blockWidth, y: robot.y * blockHeight, width: blockWidth, height: blockHeight);
         let pathObs = UIBezierPath(rect: rec)
         UIColor.red.setFill()
         pathObs.fill()
+        
+        drawPath(blockWidth: blockWidth, blockHeight: blockHeight)
+    }
+    
+    func drawPath(blockWidth: Int, blockHeight: Int) {
+        var oldX = goal.x
+        var oldY = goal.y
+        for line in lines {
+            let linePath = UIBezierPath()
+            linePath.lineWidth = 3
+            
+            linePath.move(to: CGPoint(x: (oldX * blockWidth) + blockWidth / 2, y: (oldY * blockHeight) + blockHeight / 2))
+            linePath.addLine(to: CGPoint(x: (line.x * blockWidth) + blockWidth / 2, y: (line.y * blockHeight) + blockHeight / 2))
+            
+            UIColor.blue.setStroke()
+            linePath.stroke()
+            
+            oldX = line.x
+            oldY = line.y
+        }
     }
     
     func drawGoal(blockWidth: Int, blockHeight: Int) {
-        let goal = squareBlock(x: 10, y: 3)
         let rec = CGRect(x: goal.x * blockWidth, y: goal.y * blockHeight, width: blockWidth, height: blockHeight);
         let pathObs = UIBezierPath(rect: rec)
         UIColor.green.setFill()
@@ -70,32 +92,30 @@ class UIViewCanvas: UIView {
         }
     }
     
-    func hall(hallNumber: Int) -> Array<squareBlock> {
+    func hall(hallNumber: Int) -> Array<Block> {
         if hallNumber == 1 {
-            var obstacles:[squareBlock] = []
             for i in 0...19 where (i != 11) && (i != 12) && (i != 13) {
-                obstacles.append(squareBlock(x: i, y: 23))
+                self.obstacles.append(Block(x: i, y: 23))
             }
             for i in 10...14 {
-                obstacles.append(squareBlock(x: i, y: 26))
+                self.obstacles.append(Block(x: i, y: 26))
             }
             
-            return obstacles
+            return self.obstacles
         } else if hallNumber == 2 {
-            var obstacles:[squareBlock] = []
             for i in 0...25 where (i != 5) && (i != 12) && (i != 13) {
-                obstacles.append(squareBlock(x: i, y: 23))
+                self.obstacles.append(Block(x: i, y: 23))
             }
             for i in 0...14{
-                obstacles.append(squareBlock(x: i, y: 17))
+                self.obstacles.append(Block(x: i, y: 17))
             }
             for i in 13...19{
-                obstacles.append(squareBlock(x: i, y: 19))
+                self.obstacles.append(Block(x: i, y: 19))
             }
             for i in 10...14 {
-                obstacles.append(squareBlock(x: i, y: 26))
+                self.obstacles.append(Block(x: i, y: 26))
             }
-            return obstacles
+            return self.obstacles
         }
         return []
     }
@@ -107,7 +127,6 @@ class UIViewCanvas: UIView {
             let rowPath = UIBezierPath()
             
             rowPath.move(to: CGPoint(x: 0, y: currentHeight))
-            
             rowPath.addLine(to: CGPoint(x: width - widthBorder, y: currentHeight))
             
             UIColor.black.setStroke()
@@ -128,7 +147,6 @@ class UIViewCanvas: UIView {
             let colPath = UIBezierPath()
         
             colPath.move(to: CGPoint(x: currentWidth1, y: 0))
-        
             colPath.addLine(to: CGPoint(x: currentWidth1, y: 0 + height))
         
             UIColor.black.setStroke()
@@ -144,7 +162,7 @@ class UIViewCanvas: UIView {
     
 }
 
-public class squareBlock {
+public class Block {
     let x : Int
     let y : Int
     
