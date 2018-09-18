@@ -18,9 +18,9 @@ private struct Constants {
 class UIViewCanvas: UIView {
     
     var obstacles:[Block] = []
-    var lines:[Block] = [Block(x: 10, y: 6)]
-    var goal = Block(x: 10, y: 3)
-    var robot = Block(x: 12, y: 30)
+    var lines:[Block] = [Block(x: 10, y: 6), Block(x: 10, y: 9), Block(x: 10, y: 12), Block(x: 10, y: 15), Block(x: 10, y: 18), Block(x: 10, y: 21), Block(x: 13, y: 21), Block(x: 13, y: 24), Block(x: 16, y: 24), Block(x: 16, y: 24), Block(x: 16, y: 27), Block(x: 16, y: 30), Block(x: 13, y: 30), Block(x: 12, y: 30)]
+    var robot = Block(x: 10, y: 3)
+    var goal = Block(x: 12, y: 30)
     
     override func draw(_ rect: CGRect) {
         var blockWidth = Int(floor(Double(Int(bounds.width) / Constants.columns)))
@@ -59,17 +59,25 @@ class UIViewCanvas: UIView {
     }
     
     func drawPath(blockWidth: Int, blockHeight: Int) {
-        var oldX = goal.x
-        var oldY = goal.y
+        var oldX = robot.x
+        var oldY = robot.y
+        
+        let widthPercentage: Int = Int(Double(blockWidth) * 0.25)
+        let heightPercentage: Int = Int(Double(blockHeight) * 0.25)
+        
         for line in lines {
             let linePath = UIBezierPath()
             linePath.lineWidth = 3
             
             linePath.move(to: CGPoint(x: (oldX * blockWidth) + blockWidth / 2, y: (oldY * blockHeight) + blockHeight / 2))
             linePath.addLine(to: CGPoint(x: (line.x * blockWidth) + blockWidth / 2, y: (line.y * blockHeight) + blockHeight / 2))
-            
             UIColor.blue.setStroke()
             linePath.stroke()
+            
+            let rec = CGRect (x: line.x * blockWidth + widthPercentage, y: line.y * blockHeight + heightPercentage, width: blockWidth - (2 * widthPercentage), height: blockHeight - (2 * heightPercentage));
+            let pathObs = UIBezierPath(ovalIn: rec)
+            UIColor.blue.setFill()
+            pathObs.fill()
             
             oldX = line.x
             oldY = line.y
@@ -119,7 +127,7 @@ class UIViewCanvas: UIView {
         }
         return []
     }
-
+    
     func drawRow(blockHeight: Int, width: Int, height: Int, widthBorder: Int, heightBorder: Int) {
         var currentHeight = blockHeight
         
@@ -145,13 +153,13 @@ class UIViewCanvas: UIView {
         
         for row in 1...Constants.columns {
             let colPath = UIBezierPath()
-        
+            
             colPath.move(to: CGPoint(x: currentWidth1, y: 0))
             colPath.addLine(to: CGPoint(x: currentWidth1, y: 0 + height))
-        
+            
             UIColor.black.setStroke()
             colPath.stroke()
-        
+            
             currentWidth1 = blockWidth * row
         }
         let rec = CGRect(x: width - widthBorder, y: 0, width: width, height: height);
