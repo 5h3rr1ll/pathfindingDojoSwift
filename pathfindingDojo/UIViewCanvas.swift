@@ -12,7 +12,7 @@ private struct Constants {
     static var columns: Int = 20
     static var rows: Int = 40
 }
-// Anthony
+
 @IBDesignable
 
 class UIViewCanvas: UIView {
